@@ -1,17 +1,21 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Final Grade calculator</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
+  <h2>What do I need on the final?</h2>
   <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
+  Enter the weighting and your grade for each assignment.
   </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+
+<ion-item *ngFor="let input of inputs">
+    <ion-label color="light">{{input.label}}</ion-label>
+    <ion-input type="text" [(ngModel)]="input.value"></ion-input>
+</ion-item>
+
+<button ion-button (click)="addf();">Add more assignments</button>
+<button ion-button (click)="testprint();">Test run</button>
+
 </ion-content>

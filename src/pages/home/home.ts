@@ -8,9 +8,9 @@ import { NavController } from 'ionic-angular';
 export class HomePage {
   constructor(public navCtrl: NavController) {}
 
-const counter = 1;
+counter = 1;
 
-const inputs = [
+inputs = [
   { 
     label: 'Assignment 1',
     value: '',
